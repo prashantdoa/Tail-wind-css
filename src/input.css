@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav {
+    @apply underline underline-offset-2 hover:no-underline hover: transition duration-1000 relative;
+  }
+  .navbgover {
+    @apply absolute left-[20%] -top-2  w-8 h-8 rounded-full -z-10  bg-white
+    transition-all duration-1000;
+  }
+}
+
+#navlist li:hover a {
+  display: inline-block;
+  transition: all 2s;
+  transition-timing-function: ease-out;
+  background: rgb(136, 136, 250);
+}
+
+#gola {
+  animation: spin 1s infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes spin {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20px;
+  }
+}
+#gola1 {
+  animation: spin1 1s infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes spin1 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: -20px;
+  }
+}
